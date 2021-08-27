@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "NewExam";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<center><h2>Sınav Ekle</h2></center>
+
+<form method="post">
+    <table class="table table-bordered">
+        <tr>
+            <td>Öğrenci ID</td>
+            <td><center><input type="text" name="OGRID" /></center></td>
+        </tr>
+        <tr>
+            <td>Ders ID</td>
+            <td><center><input type="text" name="DERSID" /></center></td>
+        </tr>
+        <tr>
+            <td>Sınav 1</td>
+            <td><center><input type="text" name="SINAV1" /></center></td>
+        </tr>
+        <tr>
+            <td>Sınav 2</td>
+            <td><center><input type="text" name="SINAV2" /></center></td>
+        </tr>
+        <tr>
+            <td>Proje</td>
+            <td><center><input type="text" name="PROJE" /></center></td>
+        </tr>
+        <tr>
+            <td>Ortalama</td>
+            <td><center><input type="text" name="ORTALAMA" /></center></td>
+        </tr>
+        <tr>
+            <td>Durum</td>
+            <td><center><input type="text" name="DURUM" /></center></td>
+        </tr>
+    </table>
+    <center>
+        <input type="submit" class="btn btn-success" value="Sınav Ekle" />
+        <a href="#" class="btn btn-warning" value="Hesapla">Hesapla</a>
+    </center>
+</form>
+

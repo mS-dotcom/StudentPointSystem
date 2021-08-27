@@ -1,0 +1,18 @@
+﻿@using OgrenciNotMvc.Models.EntitiyFramework
+@model OgrenciNotMvc.Models.EntitiyFramework.TBLKULUPLER
+@{
+    ViewBag.Title = "KulüpGetir";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>KulüpGetir</h2>
+
+<form method="post">
+    <div class="form-group">
+        <b>Kulüp Adı</b> <br />
+        <input type="hidden" name="KULUPID" value="@Model.KULUPID"/>
+        <input type="text" name="KULUPAD" placeholder="ÖNCEKİ ADI:@Model.KULUPAD" />
+        <input type="submit" class="btn btn-success" />
+    </div>
+
+</form>

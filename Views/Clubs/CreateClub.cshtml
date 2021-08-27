@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "CreateClub";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Kulüp Oluştur</h2>
+
+<form method="post">
+    <table class="table table-bordered">
+        <tr>
+            <td>Kulüp Adı</td>
+            <td><input type="text" name="KULUPAD" /></td>
+        </tr>
+        <tr>
+            <td>
+                <strong>Kulüp Kontejyan</strong>
+            </td>
+            <td>
+                <input type="text" name="KULUPKONT" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <center><button class="btn btn-success">Ekle</button></center>
+            </td>
+        </tr>
+    </table>
+</form>

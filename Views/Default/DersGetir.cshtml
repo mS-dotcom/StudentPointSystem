@@ -1,0 +1,29 @@
+﻿@using OgrenciNotMvc.Models.EntitiyFramework
+@model OgrenciNotMvc.Models.EntitiyFramework.TBLDERSLER
+@{
+    ViewBag.Title = "DersGetir";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>DersGetir</h2>
+
+<form method="post">
+    <div class="form-group">
+        <table>
+            <tr>
+                <td>
+                    Ders Adı
+                </td>
+                <td>
+                    <input type="hidden" name="DERSID" value="@Model.DERSID" />
+                    <input type="text" name="DERSAD" placeholder="ESKİ ADI:@Model.DERSAD" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <center><input type="submit" class="btn btn-success"  value="GÜNCELLE"/></center>
+                </td>
+            </tr>
+        </table>
+    </div>
+</form>

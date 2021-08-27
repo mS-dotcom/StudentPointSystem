@@ -1,0 +1,42 @@
+﻿@model OgrenciNotMvc.Models.EntitiyFramework.TBLOGRENCILER
+@{
+    ViewBag.Title = "CreateStudent";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>CreateStudent</h2>
+
+<form method="post">
+    <table class="table table-bordered">
+        <tr>
+            <td>Öğrenci Adı</td>
+            <td><input type="text" name="OGRAD" /></td>
+        </tr>
+        <tr>
+            <td>Öğrenci Soyadı</td>
+            <td><input type="text" name="OGRSOYAD" /></td>
+        </tr>
+        <tr>
+            <td>Öğrenci Fotoğraf</td>
+            <td><input type="text" name="OGRFOTOGRAF" /></td>
+        </tr>
+        <tr>
+            <td>Öğrenci Cinsiyet</td>
+            <td>
+                @Html.DropDownList("OGRCINSIYET",
+        new[]
+        {
+        new SelectListItem(){Value="Erkek",Text="Erkek" },
+        new SelectListItem(){Value="Kız",Text="Kız" }
+        },"Cinsiyetinizi Seçin",new { @class = "form-control" })
+        </td>
+    </tr>
+    <tr>
+        <td>Öğrenci Kulüp</td>
+        <td>@Html.DropDownListFor(m=>m.TBLKULUPLER.KULUPID, (List<SelectListItem>) ViewBag.dgr, new { @class = "form-control" })</td>
+    </tr>
+        <tr>
+            <td colspan="2"><center><input type="submit" value="Kaydet" class="btn btn-success"/></center></td>
+        </tr>
+</table>
+</form>
